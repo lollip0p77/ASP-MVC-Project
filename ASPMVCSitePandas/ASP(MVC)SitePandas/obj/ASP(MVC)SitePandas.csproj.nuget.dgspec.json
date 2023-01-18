@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Multihexa\\A85\\Developpement_Repos\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj": {}
+    "D:\\Programation\\Repos\\Github\\ASP-MVC-Project\\ASPMVCSitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj": {}
   },
   "projects": {
-    "D:\\Multihexa\\A85\\Developpement_Repos\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj": {
+    "D:\\Programation\\Repos\\Github\\ASP-MVC-Project\\ASPMVCSitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Multihexa\\A85\\Developpement_Repos\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj",
+        "projectUniqueName": "D:\\Programation\\Repos\\Github\\ASP-MVC-Project\\ASPMVCSitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj",
         "projectName": "ASP(MVC)SitePandas",
-        "projectPath": "D:\\Multihexa\\A85\\Developpement_Repos\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj",
+        "projectPath": "D:\\Programation\\Repos\\Github\\ASP-MVC-Project\\ASPMVCSitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj",
         "packagesPath": "C:\\Users\\kevbe\\.nuget\\packages\\",
-        "outputPath": "D:\\Multihexa\\A85\\Developpement_Repos\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas\\obj\\",
+        "outputPath": "D:\\Programation\\Repos\\Github\\ASP-MVC-Project\\ASPMVCSitePandas\\ASP(MVC)SitePandas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
