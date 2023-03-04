@@ -1,0 +1,24 @@
+﻿@model ASP_MVC_SitePandas.Models.Allergy;
+@{
+    ViewData["Title"] = "Delete";
+}
+<h1>Supprimer</h1>
+
+<h3>Voulez-vous vraiment supprimer cette allergie?</h3>
+<div>
+    <h4>Allergie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.Nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Nom)
+        </dd>       
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        |<a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,13 +29,8 @@
 
     <!-- Template Main CSS File -->
     <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: eStartup - v4.9.1
-    * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
 </head>
 
 <body>
@@ -42,66 +40,70 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div id="logo">
-                <h1><a href="index.html"><span>Les </span>Petits Pandas</a></h1>
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+                <h1><a asp-controller="Home" asp-action="Index"><span>Les </span>Petits Pandas</a></h1>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about-us">À propos</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>Menu parent</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Documents</a></li>
-                            <li class="dropdown">
-                                <a href="#"><span>Modification des informations</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Allergies</a></li>
-                                    <li><a href="#">Medicaments</a></li>
-                                    <li><a href="#">Personnes autorisées</a></li>
-                                    <li><a href="#">Informations personnels</a></li>
-                                    <li><a href="#">Informations enfants</a></li>
-                                    @*<li><a href="#">Deep Drop Down 5</a></li>*@
-                                </ul>
-                            </li>
-                            <li><a href="#">Calendrier</a></li>
-                            <li><a href="#">Messages</a></li>
-                            @*<li><a href="#">Drop Down 4</a></li>*@
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#"><span>Menu éducatrice</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Documents</a></li>
-                            <li class="dropdown">
-                                <a href="#"><span>Modification des informations</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Enfants</a></li>
-                                    <li><a href="#">Répondants</a></li>
-                                    <li><a href="#">Medicaments</a></li>
-                                    <li><a href="#">Personnes autorisées</a></li>
-                                    <li><a href="#">Informations personnels</a></li>
-                                    <li><a href="#">Déposer document parent</a></li>
-                                    <li><a href="#">Évenements</a></li>
-                                    <li><a href="#">Ajouter un utilisateur</a></li>
-                                    @*<li><a href="#">Deep Drop Down 5</a></li>*@
-                                </ul>
-                            </li>
-                            <li><a href="#">Calendrier</a></li>
-                            <li><a href="#">Messages</a></li>
-                            @*<li><a href="#">Drop Down 4</a></li>*@
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto" href="#features">Avantages</a></li>
-                    <li><a class="nav-link scrollto" href="#screenshots">Photos</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Personnels</a></li>
-                    <li><a class="nav-link scrollto" href="#pricing">Tarifs</a></li>
+                    <li><a class="nav-link scrollto active" href="~/#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="~/#about-us">À propos</a></li>
+                    <li><a class="nav-link scrollto" href="~/#features">Avantages</a></li>
+                    <li><a class="nav-link scrollto" href="~/#screenshots">Photos</a></li>
+                    <li><a class="nav-link scrollto" href="~/#team">Personnels</a></li>
+                    <li><a class="nav-link scrollto" href="~/#pricing">Tarifs</a></li>
+                    <li><a class="nav-link scrollto" href="~/#contact">Inscription</a></li>
+                    @if (User.IsInRole("User"))
+                    {
+                        <li class="dropdown">
+                            <a href="#"><span>Menu parent</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a asp-controller="DocumentsParents" asp-action="Index">Documents</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Modification des informations</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a asp-controller="AllergiesEnfants" asp-action="Index">Allergies</a></li>
+                                        <li><a asp-controller="Medicaments" asp-action="Index">Medicaments</a></li>
+                                        <li><a asp-controller="PersonnesAutoriser" asp-action="Index">Personnes autorisées</a></li>
+                                        <li><a asp-controller="Repondants" asp-action="Edit">Informations personnels</a></li>
+                                        <li><a asp-controller="Enfant" asp-action="Index">Enfants</a></li>
+                                    </ul>
+                                </li>
+                                <li><a asp-controller="Evenement" asp-action="Index">Calendrier</a></li>
+                                <li><a asp-controller="Message" asp-action="Index">Messages</a></li>
+                            </ul>
+                        </li>
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="dropdown">
+                            <a href="#"><span>Menu éducatrice</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>                                
+                                <li><a asp-controller="DocumentsGeneralesController1" asp-action="Index">Documents générales</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Modification des informations</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a asp-controller="Educatrices" asp-action="Index">Informations personnels</a></li>
+                                        <li><a asp-controller="Enfant" asp-action="Index">Enfants</a></li>
+                                        <li><a asp-controller="Repondants" asp-action="Index">Répondants</a></li>
+                                        <li><a asp-controller="Medicaments" asp-action="Index">Medicaments</a></li>
+                                        <li><a asp-controller="PersonnesAutoriser" asp-action="Index">Personnes autorisées</a></li>                                                                               
+                                        <li><a asp-controller="Evenements" asp-action="Index">Ajouter évenement</a></li>
+                                        <li><a asp-controller="TypeEvenements" asp-action="Index">Ajouter un type d'évenement</a></li>                                        
+                                        <li><a asp-controller="AllergiesEnfants" asp-action="Index">Allergies des enfants</a></li>
+                                        <li><a asp-controller="Allergies" asp-action="Index">Allergies</a></li>
+                                        <li><a asp-controller="DocumentsParents" asp-action="Index">Documents des répondants</a></li>
+                                        <li><a asp-area="Identity" asp-page="/Account/Register">Ajouter un utilisateur</a></li>
+                                        <li><a asp-controller="AspNetUserRoles" asp-action="Edit">Gestion des utilisateurs</a></li>
+                                    </ul>
+                                </li>
+                                <li><a asp-controller="Evenement" asp-action="Index">Calendrier</a></li>
 
-                    <li><a class="nav-link scrollto" href="#contact">Inscription</a></li>
-                    <li><a class="nav-link scrollto active" href="#connexion">connexion</a></li>
-                    @*<partial name="_LoginPartial" />*@
+                                <li><a asp-controller="Message" asp-action="Index">Messages</a></li>                               
+                            </ul>
+                        </li>
+                    }                   
+                    
+                    <partial name="_LoginPartial" />
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
 
@@ -122,96 +124,23 @@
                 <div class="col-md-12 col-lg-4">
                     <div class="footer-logo">
 
-                        <a class="navbar-brand" href="#">eStartup</a>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
+                        <a class="navbar-brand" href="#">Garderie Les Petits Pandas</a>
+                        <p>Site internet fait pour la garderie Les Petits Pandas dans le cadre du project finale du cours programmeur-analyste de Multihexa. Réaliser par Maxime Gravel, Keven Beaulieu et Simon-Pierre Gagnon</p>
 
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-md-3 col-lg-2">
-                    <div class="list-menu">
-
-                        <h4>Abou Us</h4>
-
-                        <ul class="list-unstyled">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Features item</a></li>
-                            <li><a href="#">Live streaming</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-
+                <div class="container">
+                    <p style="color:white">&copy; Copyrights P95BoYz. Tout droit réserver.</p>
+                    <div class="credits">
+                       
                     </div>
                 </div>
-
-                <div class="col-sm-6 col-md-3 col-lg-2">
-                    <div class="list-menu">
-
-                        <h4>Abou Us</h4>
-
-                        <ul class="list-unstyled">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Features item</a></li>
-                            <li><a href="#">Live streaming</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-3 col-lg-2">
-                    <div class="list-menu">
-
-                        <h4>Support</h4>
-
-                        <ul class="list-unstyled">
-                            <li><a href="#">faq</a></li>
-                            <li><a href="#">Editor help</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-3 col-lg-2">
-                    <div class="list-menu">
-
-                        <h4>Abou Us</h4>
-
-                        <ul class="list-unstyled">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Features item</a></li>
-                            <li><a href="#">Live streaming</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="copyrights">
-            <div class="container">
-                <p>&copy; Copyrights eStartup. All rights reserved.</p>
-                <div class="credits">
-                    <!--
-                      All the links in the footer should remain intact.
-                      You can delete the links only if you purchased the pro version.
-                      Licensing information: https://bootstrapmade.com/license/
-                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
-                    -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
+                
             </div>
         </div>
 
     </footer><!-- End  Footer -->
-    @*<footer class="border-top footer text-muted">
-    <div class="container">
-    &copy; 2022 - LesPetisPandas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-    </footer>*@
+
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->

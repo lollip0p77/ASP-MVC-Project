@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.EventListe>
+
+<html lang='en'>
+    <head>
+    <meta charset='utf-8' />
+    <script src='~/assets/fullcalendar/dist/index.global.js'></script>
+    <script src='~/assets/fullcalendar/core/locales/fr-ca.global.js'></script>
+        <script>
+            // get model in array javascript
+            let sqlQueryList = @Html.Raw(Json.Serialize(Model));
+            let events = [];
+
+            // fonction pour créer un tableau pour les event a inséréer au calendrier
+            function addEvent(title, start, end, description) {
+                let event = {
+                    title: title,
+                    start: start,
+                    end: end,
+                    description: description,
+                    allDay: true
+                };
+                events.push(event);
+            }
+
+            // démélage des donner et création du tableau
+            sqlQueryList.forEach(function(array){
+                addEvent(array.titre,array.heureDebut,array.heureFin,array.description)
+            })
+
+            //création du popup et des variable nécéssaire
+            let tooltip = document.createElement("div");
+            tooltip.id = "tooltip";
+
+            // création du calendrier
+            document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    timeZone: 'UTC',
+                    headerToolbar: {
+                        left: '',
+                        center: 'title',
+                        right: 'prev,next',
+                    },
+                    allDayText: '',
+                    locale: 'fr-caLocale',
+                    weekNumbers: false,
+                    dayMaxEvents: true,
+                    events: events,
+                    eventColor: '#378006',
+                    eventDisplay: 'block',
+                    eventMouseEnter: function(event) {                      
+                        tooltip.innerHTML = event.event.extendedProps.description;
+                        event.el.appendChild(tooltip);
+
+                        //test size
+                        let hiddenDiv = document.createElement("div");
+                        hiddenDiv.style.visibility = "hidden";
+                        hiddenDiv.style.position = "absolute";
+                        hiddenDiv.style.display = "inline-block";
+                        hiddenDiv.innerHTML = event.event.extendedProps.description;
+                        document.body.appendChild(hiddenDiv);
+                        let descriptionWidth = hiddenDiv.offsetWidth;
+                        let descriptionHeight = hiddenDiv.offsetHeight;
+                        let initialWidth = event.el.offsetWidth;
+                        initialHeight = event.el.offsetHeight;
+                        if (initialWidth < descriptionWidth){
+                            event.el.style.width = descriptionWidth + 30 + "px";
+                        }
+                        document.body.removeChild(hiddenDiv);
+                    },
+                    eventMouseLeave: function(event){
+                        event.el.removeChild(tooltip);
+                        event.el.style.width = "auto";
+                        
+                    }
+                });
+                calendar.render();
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id='calendar'></div>
+    </body>
+</html>

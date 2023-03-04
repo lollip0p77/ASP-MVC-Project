@@ -1,0 +1,83 @@
+﻿@model ASP_MVC_SitePandas.Models.Repondant
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section id="Repondants" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Repondants</h2>
+            <p class="" style="text-align: center">Veuillez remplir les champs ci dessous pour ajouter l'enfant.</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <input asp-for="Nom" type="text" class="form-control" id="nom" placeholder="Nom" required>
+                            <span asp-validation-for="Nom" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px; padding-bottom:10px">
+                            <input asp-for="Prenom" type="text" class="form-control" id="prenom" placeholder="Prénom" required>
+                            <span asp-validation-for="Prenom" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <select asp-for="Sexe" style="color:gray" id="sexeRepondant" class="form-select" aria-label="Default select example">
+                                <option selected>Sexe</option>
+                                <option value="M">Masculin</option>
+                                <option value="F">Féminin</option>
+                            </select>
+                            <span asp-validation-for="Sexe" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px">
+                            <input asp-for="Adresse" type="text" class="form-control" id="adresse" placeholder="Adresse" required>
+                            <span asp-validation-for="Adresse" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px">
+                            <input asp-for="Ville" type="text" class="form-control" id="ville" placeholder="Ville" required>
+                            <span asp-validation-for="Ville" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px">
+                            <input asp-for="CodePostal" type="text" class="form-control" id="codePostal" placeholder="Code postal" required>
+                            <span asp-validation-for="CodePostal" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input asp-for="Courriel" type="email" class="form-control" id="courrielRep" placeholder="Adresse courriel" required>
+                            <span asp-validation-for="Courriel" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px">
+                            <input asp-for="Telephone" type="tel" class="form-control" id="telephoneRep" placeholder="Téléphone" required>
+                            <span asp-validation-for="Telephone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px; padding-bottom:10px">
+                            <label>Date de création du compte</label>
+                            <input asp-for="CreationDeCompte" type="date" class="form-control" id="dateCreation" placeholder="Date de création du compte" required>
+                            <span asp-validation-for="CreationDeCompte" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px; padding-bottom:10px">
+                            <input asp-for="Lien" type="text" class="form-control" id="lien" placeholder="Lien avec l'enfant" required>
+                            <span asp-validation-for="Lien" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px;">
+                            <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                        </div>
+                        <div style="padding-top: 20px" class="text-center"><button class="btn" style="background-color:limegreen" type="submit" value="Save">Ajouter</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

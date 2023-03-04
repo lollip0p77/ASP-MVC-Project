@@ -1,0 +1,53 @@
+﻿@model ASP_MVC_SitePandas.Models.AllergiesEnfant
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section id="AllergiesEnfant" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Allergie de l'enfant</h2>
+            <h4>Voulez vous supprimer cette allergie de la liste?</h4>
+
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="mb-3 row">
+                            <label for="staticEnfant" class="col-sm-2 col-form-label">Enfant:</label>
+                            <div class="col-sm-10 text-color2">
+                                <input type="text" readonly class="form-control-plaintext" id="Enfant" value="@Html.DisplayFor(model => model.Enfant.Prenom)">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="staticAllergie" class="col-sm-2 col-form-label">Allergie:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticAllergie" value="@Html.DisplayFor(model => model.Allergie.Nom)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticIntervention" class="col-sm-2 col-form-label">Intervention:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticIntervention" value="@Html.DisplayFor(model => model.Intervention)">
+                            </div>
+                        </div>
+
+                        <div style="padding-top: 20px" class="text-center">
+                            <button class="btn" style="background-color:red" type="submit" value="Delete">Supprimer</button>
+                            <a asp-action="Index">Back to List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

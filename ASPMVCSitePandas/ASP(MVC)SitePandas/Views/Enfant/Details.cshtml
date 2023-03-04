@@ -1,0 +1,72 @@
+﻿@model ASP_MVC_SitePandas.Models.Enfant;
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+<h1>Informations</h1>
+
+<div>
+    <h4>Enfant</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nom:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            Prenom:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            Sexe:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Sexe)
+        </dd>
+        <dt class="col-sm-2">
+            Date de naissance:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.DateDeNaissance)
+        </dd>
+        <dt class="col-sm-2">
+            Date d'inscription:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.DateInscription)
+        </dd>
+        <dt class="col-sm-2">
+            Probleme de santé:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.ProblemeSante)
+        </dd>
+        <dt class="col-sm-2">
+            Probleme de comportements:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.ProblemeComportement)
+        </dd>
+        <dt class="col-sm-2">
+            Information supplémentaire:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.InformationSupplementaire)
+        </dd>
+        <dt class="col-sm-2">
+            Répondant:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Repondant.Prenom)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>|
+    <a asp-action="Index">Back to List</a>
+</div>

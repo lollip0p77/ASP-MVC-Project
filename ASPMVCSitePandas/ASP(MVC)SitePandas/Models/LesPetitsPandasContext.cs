@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ASP_MVC_SitePandas.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -24,6 +25,9 @@ namespace ASP_MVC_SitePandas.Models
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; } = null!;
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; } = null!;
         public virtual DbSet<AspNetUserToken> AspNetUserTokens { get; set; } = null!;
+        /**/
+        public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; } = null!;
+        /**/
         public virtual DbSet<DocumentsGenerale> DocumentsGenerales { get; set; } = null!;
         public virtual DbSet<DocumentsParent> DocumentsParents { get; set; } = null!;
         public virtual DbSet<Educatrice> Educatrices { get; set; } = null!;
@@ -32,7 +36,6 @@ namespace ASP_MVC_SitePandas.Models
         public virtual DbSet<Garderie> Garderies { get; set; } = null!;
         public virtual DbSet<ListeDattente> ListeDattentes { get; set; } = null!;
         public virtual DbSet<Medicament> Medicaments { get; set; } = null!;
-        public virtual DbSet<MedicamentTransition> MedicamentTransitions { get; set; } = null!;
         public virtual DbSet<Message> Messages { get; set; } = null!;
         public virtual DbSet<PersonnesAutoriser> PersonnesAutorisers { get; set; } = null!;
         public virtual DbSet<Presence> Presences { get; set; } = null!;
@@ -77,20 +80,20 @@ namespace ASP_MVC_SitePandas.Models
                     .IsUnique()
                     .HasFilter("([NormalizedUserName] IS NOT NULL)");
 
-                entity.HasMany(d => d.Roles)
-                    .WithMany(p => p.Users)
-                    .UsingEntity<Dictionary<string, object>>(
-                        "AspNetUserRole",
-                        l => l.HasOne<AspNetRole>().WithMany().HasForeignKey("RoleId"),
-                        r => r.HasOne<AspNetUser>().WithMany().HasForeignKey("UserId"),
-                        j =>
-                        {
-                            j.HasKey("UserId", "RoleId");
+                entity.HasMany(d => d.Roles);
+                    //.WithMany(p => p.Users)
+                    //.UsingEntity<Dictionary<string, object>>(
+                    //    "AspNetUserRole",
+                    //    l => l.HasOne<AspNetRole>().WithMany().HasForeignKey("RoleId"),
+                    //    r => r.HasOne<AspNetUser>().WithMany().HasForeignKey("UserId"),
+                    //    j =>
+                    //    {
+                    //        j.HasKey("UserId", "RoleId");
 
-                            j.ToTable("AspNetUserRoles");
+                    //        j.ToTable("AspNetUserRoles");
 
-                            j.HasIndex(new[] { "RoleId" }, "IX_AspNetUserRoles_RoleId");
-                        });
+                    //        j.HasIndex(new[] { "RoleId" }, "IX_AspNetUserRoles_RoleId");
+                    //    });
             });
 
             modelBuilder.Entity<AspNetUserLogin>(entity =>
@@ -102,7 +105,21 @@ namespace ASP_MVC_SitePandas.Models
             {
                 entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Name });
             });
+            // A ajouter pour la gestion des utilisateurs
+            modelBuilder.Entity<AspNetUserRole>(entity =>
+            {
+                entity.HasKey("UserId", "RoleId");
 
+                entity.HasOne(r => r.Role)
+               .WithMany(ur => ur.UserRoles)
+               .HasForeignKey(r => r.RoleId);
+
+                entity.HasOne(r => r.User)
+               .WithMany(ur => ur.UserRoles)
+               .HasForeignKey(r => r.UserId);
+
+            });
+            
             modelBuilder.Entity<DocumentsParent>(entity =>
             {
                 entity.HasOne(d => d.Repondant)
@@ -110,6 +127,15 @@ namespace ASP_MVC_SitePandas.Models
                     .HasForeignKey(d => d.RepondantId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_DocumentsParent_Repondant");
+            });
+
+            modelBuilder.Entity<Educatrice>(entity =>
+            {
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Educatrices)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Educatrices_AspNetUsers");
             });
 
             modelBuilder.Entity<Enfant>(entity =>
@@ -130,28 +156,24 @@ namespace ASP_MVC_SitePandas.Models
                     .HasConstraintName("FK_Evenements_TypeEvenement");
             });
 
-            modelBuilder.Entity<MedicamentTransition>(entity =>
+            modelBuilder.Entity<Medicament>(entity =>
             {
                 entity.HasOne(d => d.Enfant)
-                    .WithMany(p => p.MedicamentTransitions)
+                    .WithMany(p => p.Medicaments)
                     .HasForeignKey(d => d.EnfantId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_MedicamentTransition_Enfants");
-
-                entity.HasOne(d => d.MedicamentsEnfants)
-                    .WithMany(p => p.MedicamentTransitions)
-                    .HasForeignKey(d => d.MedicamentsEnfantsId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_MedicamentTransition_Medicaments");
+                    .HasConstraintName("FK_Medicaments_Enfants");
             });
 
             modelBuilder.Entity<Message>(entity =>
             {
+                entity.Property(e => e.Envoyeur).IsFixedLength();
+
                 entity.HasOne(d => d.Educatrice)
                     .WithMany(p => p.Messages)
                     .HasForeignKey(d => d.EducatriceId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Messages_Educatrices");
+                    .HasConstraintName("FK_Messages_Educatrices1");
 
                 entity.HasOne(d => d.Repondant)
                     .WithMany(p => p.Messages)
@@ -162,11 +184,9 @@ namespace ASP_MVC_SitePandas.Models
 
             modelBuilder.Entity<PersonnesAutoriser>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
-
-                entity.HasOne(d => d.IdNavigation)
-                    .WithOne(p => p.PersonnesAutoriser)
-                    .HasForeignKey<PersonnesAutoriser>(d => d.Id)
+                entity.HasOne(d => d.Enfant)
+                    .WithMany(p => p.PersonnesAutorisers)
+                    .HasForeignKey(d => d.EnfantId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_PersonnesAutoriser_Enfants");
             });
@@ -187,6 +207,15 @@ namespace ASP_MVC_SitePandas.Models
                     .HasForeignKey(d => d.EvenementId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Presences__Evene__34C8D9D1");
+            });
+
+            modelBuilder.Entity<Repondant>(entity =>
+            {
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Repondants)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Repondant_AspNetUsers");
             });
 
             OnModelCreatingPartial(modelBuilder);

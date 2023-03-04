@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.Educatrice>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Liste des educatrices</h1>
+<p>
+    <a asp-action="Create" class="btn" style="background-color:limegreen">ajouter</a>
+
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nom)</th>
+            <th>@Html.DisplayNameFor(model => model.Prenom)</th>
+            
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Nom)</td>
+                <td>@Html.DisplayFor(modelItem => item.Prenom)</td>
+                
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-pencil"></span></a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-trash"></span></a>
+                    <a asp-action="Details" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-eye"></span></a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

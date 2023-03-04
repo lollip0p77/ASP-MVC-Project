@@ -1,0 +1,74 @@
+﻿@model ASP_MVC_SitePandas.Models.Enfant;
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<section id="Enfants" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Enfants</h2>
+            <p class="" style="text-align: center">Veuillez remplir les champs ci dessous pour ajouter l'enfant.</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Create">
+                        <div class="form-group">
+                            <input asp-for="Nom" type="text" class="form-control" id="nom" placeholder="Nom de l'enfant" required>
+                            <span asp-validation-for="Nom" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Prenom" type="text" class="form-control" id="prenom" placeholder="Prénom de l'enfant" required>
+                            <span asp-validation-for="Prenom" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <select asp-for="Sexe" style="color:gray" id="sexeEnfant" class="form-select" aria-label="Default select example">
+                                <option selected>Sexe</option>
+                                <option value="M">Masculin</option>
+                                <option value="F">Féminin</option>
+                            </select>
+                            <span asp-validation-for="Sexe" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateDeNaissance">Date de naissance</label>
+                            <input asp-for="DateDeNaissance" type="date" class="form-control" id="dob" placeholder="Date de naissance" required>
+                            <span asp-validation-for="DateDeNaissance" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DateInscription">Date d'inscription</label>
+                            <input asp-for="DateInscription" type="date" class="form-control" id="dInscription" placeholder="Date de l'inscription" required>
+                            <span asp-validation-for="DateInscription" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea asp-for="ProblemeSante" class="form-control" rows="5" placeholder="Problème de santé" required></textarea>
+                            <span asp-validation-for="ProblemeSante" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea asp-for="ProblemeComportement" class="form-control" rows="5" placeholder="Problème de comportement" required></textarea>
+                            <span asp-validation-for="ProblemeComportement" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea asp-for="InformationSupplementaire" class="form-control" rows="5" placeholder="Informations supplémentaires" required></textarea>
+                            <span asp-validation-for="InformationSupplementaire" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px;">
+                            <select asp-for="RepondantId" class="form-control" asp-items="ViewBag.RepondanId"></select>
+                        </div>
+                        <div style="padding-top: 20px" class="text-center"><button class="btn" style="background-color:limegreen" type="submit" value="Create">Ajouter</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Enfant Section -->
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

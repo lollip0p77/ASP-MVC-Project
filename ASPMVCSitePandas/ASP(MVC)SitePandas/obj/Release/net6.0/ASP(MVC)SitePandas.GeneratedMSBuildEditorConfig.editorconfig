@@ -1,0 +1,321 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ASP_MVC_SitePandas
+build_property.RootNamespace = ASP_MVC_SitePandas
+build_property.ProjectDir = D:\Multihexa\P95\Test\ASPMVCSitePandas\ASPMVCSitePandas\ASP(MVC)SitePandas\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Multihexa\P95\Test\ASPMVCSitePandas\ASPMVCSitePandas\ASP(MVC)SitePandas
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/AllergiesEnfants/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzRW5mYW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/AllergiesEnfants/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzRW5mYW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/AllergiesEnfants/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzRW5mYW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/AllergiesEnfants/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzRW5mYW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/AllergiesEnfants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzRW5mYW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Allergies/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Allergies/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Allergies/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Allergies/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxsZXJnaWVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/AspNetUserRoles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNwTmV0VXNlclJvbGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/DocumentsGeneralesController1/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzR2VuZXJhbGVzQ29udHJvbGxlcjFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/DocumentsGeneralesController1/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzR2VuZXJhbGVzQ29udHJvbGxlcjFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/DocumentsGeneralesController1/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzR2VuZXJhbGVzQ29udHJvbGxlcjFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/DocumentsParents/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzUGFyZW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/DocumentsParents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzUGFyZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/DocumentsParents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdW1lbnRzUGFyZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Educatrices/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0cmljZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Educatrices/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0cmljZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Educatrices/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0cmljZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Educatrices/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0cmljZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Educatrices/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWR1Y2F0cmljZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Enfant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Enfant/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Enfant/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Enfant/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Enfant/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Evenements/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbmVtZW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Evenements/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbmVtZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Evenements/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbmVtZW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Evenements/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbmVtZW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Evenements/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbmVtZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Evenement/EvenementListe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbmVtZW50XEV2ZW5lbWVudExpc3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Evenement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbmVtZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Garderie/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FyZGVyaWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Garderie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FyZGVyaWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/ListeAttente/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGVBdHRlbnRlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/ListeAttente/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGVBdHRlbnRlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/ListeAttente/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGVBdHRlbnRlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/ListeAttente/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGVBdHRlbnRlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/ListeAttente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGVBdHRlbnRlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Medicaments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Medicaments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Medicaments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Medicaments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Medicaments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNhbWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Message/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Message/Message.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZVxNZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/PersonnesAutoriser/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVzQXV0b3Jpc2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/PersonnesAutoriser/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVzQXV0b3Jpc2VyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/PersonnesAutoriser/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVzQXV0b3Jpc2VyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/PersonnesAutoriser/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVzQXV0b3Jpc2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/PersonnesAutoriser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVzQXV0b3Jpc2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Repondants/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25kYW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Repondants/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25kYW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Repondants/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25kYW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Repondants/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25kYW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Repondants/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb25kYW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/TypeEvenements/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZUV2ZW5lbWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/TypeEvenements/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZUV2ZW5lbWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/TypeEvenements/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZUV2ZW5lbWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/TypeEvenements/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZUV2ZW5lbWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/TypeEvenements/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHlwZUV2ZW5lbWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Multihexa/P95/Test/ASPMVCSitePandas/ASPMVCSitePandas/ASP(MVC)SitePandas/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-uopobiybev

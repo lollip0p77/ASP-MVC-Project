@@ -1,18 +1,8 @@
-html {
-  font-size: 14px;
+#tooltip {
+ /*   background-color: #378006;
+    color:white;*/
+    padding:5px 3px;
 }
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+    margin-top:7%;
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ASP_MVC_SitePandas.Models
 {
-    [Index("NormalizedEmail", Name = "EmailIndex")]
+    //[Index("NormalizedEmail", Name = "EmailIndex")]
     public partial class AspNetUser
     {
         public AspNetUser()
@@ -14,18 +14,20 @@ namespace ASP_MVC_SitePandas.Models
             AspNetUserClaims = new HashSet<AspNetUserClaim>();
             AspNetUserLogins = new HashSet<AspNetUserLogin>();
             AspNetUserTokens = new HashSet<AspNetUserToken>();
+            Educatrices = new HashSet<Educatrice>();
+            Repondants = new HashSet<Repondant>();
             Roles = new HashSet<AspNetRole>();
         }
 
-        [Key]
+        //[Key]
         public string Id { get; set; } = null!;
-        [StringLength(256)]
+        //[StringLength(256)]
         public string? UserName { get; set; }
-        [StringLength(256)]
+        //[StringLength(256)]
         public string? NormalizedUserName { get; set; }
-        [StringLength(256)]
+        //[StringLength(256)]
         public string? Email { get; set; }
-        [StringLength(256)]
+        //[StringLength(256)]
         public string? NormalizedEmail { get; set; }
         public bool EmailConfirmed { get; set; }
         public string? PasswordHash { get; set; }
@@ -38,15 +40,24 @@ namespace ASP_MVC_SitePandas.Models
         public bool LockoutEnabled { get; set; }
         public int AccessFailedCount { get; set; }
 
-        [InverseProperty("User")]
+        //[InverseProperty("User")]
         public virtual ICollection<AspNetUserClaim> AspNetUserClaims { get; set; }
-        [InverseProperty("User")]
+        //[InverseProperty("User")]
         public virtual ICollection<AspNetUserLogin> AspNetUserLogins { get; set; }
-        [InverseProperty("User")]
+        //[InverseProperty("User")]
         public virtual ICollection<AspNetUserToken> AspNetUserTokens { get; set; }
+        //[InverseProperty("User")]
+        public virtual ICollection<Educatrice> Educatrices { get; set; }
+        //[InverseProperty("User")]
+        public virtual ICollection<Repondant> Repondants { get; set; }
 
-        [ForeignKey("UserId")]
-        [InverseProperty("Users")]
+        //[ForeignKey("UserId")]
+        //[InverseProperty("Users")]
         public virtual ICollection<AspNetRole> Roles { get; set; }
+
+        /***/
+        //[ForeignKey("RoleId")]
+        public virtual ICollection<AspNetUserRole> UserRoles { get; set; }
+        /***/
     }
 }

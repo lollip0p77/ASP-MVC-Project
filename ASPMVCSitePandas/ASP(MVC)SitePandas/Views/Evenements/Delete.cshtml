@@ -1,0 +1,56 @@
+﻿@model ASP_MVC_SitePandas.Models.Evenement
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Supprimer</h1>
+
+<h3>Voulez-vous vraiment supprimer cet évènement?</h3>
+<div>
+    <h4>Évènement</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.Titre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Titre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.Cout)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Cout)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.HeureDebut)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.HeureDebut)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.HeureFin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.HeureFin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.TypeId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.TypeId)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        |<a asp-action="Index">Back to List</a>
+    </form>
+</div>

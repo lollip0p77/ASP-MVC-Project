@@ -22,19 +22,17 @@ namespace ASP_MVC_SitePandas.Models
         public string Description { get; set; } = null!;
         [Column(TypeName = "money")]
         public decimal? Cout { get; set; }
-        [Column(TypeName = "date")]
-        public DateTime Date { get; set; }
-        [StringLength(5)]
-        public string HeureDebut { get; set; } = null!;
-        [StringLength(5)]
-        public string HeureFin { get; set; } = null!;
+        [Column(TypeName = "datetime")]
+        public DateTime HeureDebut { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime HeureFin { get; set; }
         [Column("TypeID")]
         public int TypeId { get; set; }
 
         [ForeignKey("TypeId")]
         [InverseProperty("Evenements")]
-        public virtual TypeEvenement Type { get; set; } = null!;
+        public virtual TypeEvenement? Type { get; set; } = null!;
         [InverseProperty("Evenement")]
-        public virtual ICollection<Presence> Presences { get; set; }
+        public virtual ICollection<Presence>? Presences { get; set; }
     }
 }

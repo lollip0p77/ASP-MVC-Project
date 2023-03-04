@@ -1,0 +1,42 @@
+﻿@model ASP_MVC_SitePandas.Models.DocumentsParentViewModel;
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<!-- ======= Déposer Document General Section ======= -->
+<section id="DocumentGeneral" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Documents</h2>
+            <p class="" style="text-align: center">Veuillez déposer le document pour le parents et l'ajouter au dossier.</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Create" enctype="multipart/form-data">
+
+                        <div class="form-group">
+                            <input asp-for="DocNom" type="text" class="form-control" id="nomDocument" placeholder="Nom du document" required>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px;">
+                            <select id="test" asp-for="FkRepondant" class="form-control" asp-items="ViewBag.RepondantId"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>Déposer le document..</label>
+                            <input asp-for="DocFile" type="file" id="docGeneral">
+                        </div>
+
+
+                        <div style="padding-top: 20px" class="text-center"><button class="btn" style="background-color:limegreen" type="submit">Envoyer</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Déposer Document General Section -->

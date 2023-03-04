@@ -1,0 +1,70 @@
+﻿@model ASP_MVC_SitePandas.Models.ListeDattente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section id="Client" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Client</h2>
+            <h4>Voulez vous supprimer se client de la liste?</h4>
+
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="mb-3 row">
+                            <label for="staticNom" class="col-sm-2 col-form-label">Nom:</label>
+                            <div class="col-sm-10 text-color2">
+                                <input type="text" readonly class="form-control-plaintext" id="Nom" value="@Html.DisplayFor(model => model.Nom)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticPrenom" class="col-sm-2 col-form-label">Prénom:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticPrenom" value="@Html.DisplayFor(model => model.Prenom)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticTelephone" class="col-sm-2 col-form-label">Téléphone:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticTelephone" value="@Html.DisplayFor(model => model.Telephone)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticCourriel" class="col-sm-2 col-form-label">Courriel:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticCourriel" value="@Html.DisplayFor(model => model.Couriel)">
+                            </div>
+                        </div>                       
+                        <div class="mb-3 row">
+                            <label for="staticNombreEnfant" class="col-sm-2 col-form-label">Nombre d'enfants:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticNombreEnfant" value="@Html.DisplayFor(model => model.NombreEnfants)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticDescription" class="col-sm-2 col-form-label">Description:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticDescription" value="@Html.DisplayFor(model => model.Description)">
+                            </div>
+                        </div>
+
+                        <div style="padding-top: 20px" class="text-center">
+                            <button class="btn" style="background-color:red" type="submit" value="Delete">Supprimer</button>
+                            <a asp-action="Index">Back to List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

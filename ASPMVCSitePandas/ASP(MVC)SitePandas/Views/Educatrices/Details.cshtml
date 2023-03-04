@@ -1,0 +1,78 @@
+﻿@model ASP_MVC_SitePandas.Models.Educatrice;
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+<h1>Informations</h1>
+
+<div>
+    <h4>Educatrices</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nom:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            Prenom:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            Sexe:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Sexe)
+        </dd>
+        <dt class="col-sm-2">
+            Adresse:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Adresse)
+        </dd>
+        <dt class="col-sm-2">
+            Ville:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Ville)
+        </dd>
+        <dt class="col-sm-2">
+            Code Postal:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.CodePostal)
+        </dd>
+        <dt class="col-sm-2">
+            Date de naissance:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.DateDeNaissance)
+        </dd>
+        <dt class="col-sm-2">
+            Date d'embauche:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.DateDembauche)
+        </dd>
+        <dt class="col-sm-2">
+            Date de fin d'emploi:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.DateDeFinDemploi)
+        </dd>
+        <dt class="col-sm-2">
+            Salaire:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Salaire)$
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>|
+    <a asp-action="Index">Back to List</a>
+</div>

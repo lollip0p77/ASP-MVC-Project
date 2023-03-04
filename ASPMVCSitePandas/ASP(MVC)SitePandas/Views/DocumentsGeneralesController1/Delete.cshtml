@@ -1,0 +1,40 @@
+﻿@model ASP_MVC_SitePandas.Models.DocumentsGenerale
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section id="docGeneral" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Documents génerale</h2>
+            <h4>Voulez vous supprimer ce document de la liste?</h4>
+
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="mb-3 row">
+                            <label for="staticDocGeneral" class="col-sm-2 col-form-label">Document:</label>
+                            <div class="col-sm-10 text-color2">
+                                <input type="text" readonly class="form-control-plaintext" id="Enfant" value="@Html.DisplayFor(model => model.Nom)">
+                            </div>
+                        </div>
+
+                        <div style="padding-top: 20px" class="text-center">
+                            <button class="btn" style="background-color:red" type="submit" value="Delete">Supprimer</button>
+                            <a asp-action="Index">Back to List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

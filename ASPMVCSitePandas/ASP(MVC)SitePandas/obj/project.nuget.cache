@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "zP/QI1cPSTLd0BzIh9CSJb45lj3YKPb4xo9r+l2QS+Sc40f9bfYahWEOoLTtl+w4Dp2pwlACrnsfxhE6J4KmOw==",
+  "dgSpecHash": "MNJ7rQ6o/BNX9EpBWoaVwyiEtf6CDjyT9DoKys5mOBG51vZnRqSyib3s66ED7S8qF94x55USmVxuWZWzTEBhdg==",
   "success": true,
   "projectFilePath": "D:\\Programation\\Repos\\Github\\ASP-MVC-Project\\ASPMVCSitePandas\\ASP(MVC)SitePandas\\ASP(MVC)SitePandas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kevbe\\.nuget\\packages\\filesignatures\\4.4.0\\filesignatures.4.4.0.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.13\\microsoft.aspnetcore.cryptography.internal.6.0.13.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.13\\microsoft.aspnetcore.cryptography.keyderivation.6.0.13.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\6.0.10\\microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.10.nupkg.sha512",
@@ -36,7 +38,7 @@
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.diasymreader\\1.3.0\\microsoft.diasymreader.1.3.0.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.dotnet.scaffolding.shared\\6.0.11\\microsoft.dotnet.scaffolding.shared.6.0.11.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.dotnet.scaffolding.shared\\6.0.12\\microsoft.dotnet.scaffolding.shared.6.0.12.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.13\\microsoft.entityframeworkcore.6.0.13.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.13\\microsoft.entityframeworkcore.abstractions.6.0.13.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.13\\microsoft.entityframeworkcore.analyzers.6.0.13.nupkg.sha512",
@@ -67,13 +69,13 @@
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.debugger.contracts\\17.2.0\\microsoft.visualstudio.debugger.contracts.17.2.0.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.11\\microsoft.visualstudio.web.codegeneration.6.0.11.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.11\\microsoft.visualstudio.web.codegeneration.core.6.0.11.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\6.0.11\\microsoft.visualstudio.web.codegeneration.design.6.0.11.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.entityframeworkcore\\6.0.11\\microsoft.visualstudio.web.codegeneration.entityframeworkcore.6.0.11.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\6.0.11\\microsoft.visualstudio.web.codegeneration.templating.6.0.11.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\6.0.11\\microsoft.visualstudio.web.codegeneration.utils.6.0.11.nupkg.sha512",
-    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\6.0.11\\microsoft.visualstudio.web.codegenerators.mvc.6.0.11.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\6.0.12\\microsoft.visualstudio.web.codegeneration.6.0.12.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\6.0.12\\microsoft.visualstudio.web.codegeneration.core.6.0.12.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.design\\6.0.12\\microsoft.visualstudio.web.codegeneration.design.6.0.12.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.entityframeworkcore\\6.0.12\\microsoft.visualstudio.web.codegeneration.entityframeworkcore.6.0.12.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\6.0.12\\microsoft.visualstudio.web.codegeneration.templating.6.0.12.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\6.0.12\\microsoft.visualstudio.web.codegeneration.utils.6.0.12.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\6.0.12\\microsoft.visualstudio.web.codegenerators.mvc.6.0.12.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
@@ -88,6 +90,7 @@
     "C:\\Users\\kevbe\\.nuget\\packages\\nuget.projectmodel\\6.3.1\\nuget.projectmodel.6.3.1.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\nuget.protocol\\6.3.1\\nuget.protocol.6.3.1.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\nuget.versioning\\6.3.1\\nuget.versioning.6.3.1.nupkg.sha512",
+    "C:\\Users\\kevbe\\.nuget\\packages\\openmcdf\\2.2.1.9\\openmcdf.2.2.1.9.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -186,5 +189,16 @@
     "C:\\Users\\kevbe\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\kevbe\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'Microsoft.AspNet.Identity.Core 2.2.3' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' au lieu du framework cible du projet 'net6.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

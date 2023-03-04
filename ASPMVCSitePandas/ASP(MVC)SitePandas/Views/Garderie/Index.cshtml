@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.Garderie>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Information sur la garderie</h1>
+<p>
+    <a asp-action="Edit" class="btn" style="background-color:limegreen" value="Edit">Modifier</a>
+
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nom)</th>
+            <th>@Html.DisplayNameFor(model => model.Adresse)</th>
+            <th>@Html.DisplayNameFor(model => model.Ville)</th>
+            <th>@Html.DisplayNameFor(model => model.CodePostal)</th>
+            <th>@Html.DisplayNameFor(model => model.Telephone)</th>
+            <th>@Html.DisplayNameFor(model => model.Description)</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Nom)</td>
+                <td>@Html.DisplayFor(modelItem => item.Adresse)</td>
+                <td>@Html.DisplayFor(modelItem => item.Ville)</td>
+                <td>@Html.DisplayFor(modelItem => item.CodePostal)</td>
+                <td>@Html.DisplayFor(modelItem => item.Telephone)</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-pencil"></span></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

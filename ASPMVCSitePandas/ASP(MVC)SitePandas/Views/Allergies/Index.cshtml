@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.Allergy>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Liste des Allergies</h1>
+<p>
+    <a asp-action="Create" class="btn" style="background-color:limegreen">ajouter</a>
+
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nom)</th>
+            
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Nom)</td>
+                
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-pencil"></span></a>
+                    <a asp-action="Delete" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-trash"></span></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

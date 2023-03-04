@@ -22,6 +22,6 @@ namespace ASP_MVC_SitePandas.Models
         public string? TypeEvenement1 { get; set; }
 
         [InverseProperty("Type")]
-        public virtual ICollection<Evenement> Evenements { get; set; }
+        public virtual ICollection<Evenement>? Evenements { get; set; }
     }
 }

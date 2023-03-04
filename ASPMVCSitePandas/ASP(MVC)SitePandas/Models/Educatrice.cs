@@ -36,8 +36,15 @@ namespace ASP_MVC_SitePandas.Models
         public DateTime? DateDeFinDemploi { get; set; }
         [Column(TypeName = "money")]
         public decimal? Salaire { get; set; }
+        [StringLength(14)]
+        public string Telephone { get; set; } = null!;
+        [StringLength(450)]
+        public string UserId { get; set; } = null!;
 
+        [ForeignKey("UserId")]
+        [InverseProperty("Educatrices")]
+        public virtual AspNetUser? User { get; set; } = null!;
         [InverseProperty("Educatrice")]
-        public virtual ICollection<Message> Messages { get; set; }
+        public virtual ICollection<Message>? Messages { get; set; }
     }
 }

@@ -6,6 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ASP_MVC_SitePandas.Models
 {
+    [Serializable]
+    public class JsonResponseViewModel
+    {        //bool for working or not       
+        public int ResponseCode { get; set; }
+        //data return        
+        public string ResponseMessage { get; set; } = string.Empty;
+    }
     [Table("PersonnesAutoriser")]
     public partial class PersonnesAutoriser
     {
@@ -17,15 +24,17 @@ namespace ASP_MVC_SitePandas.Models
         public string Prenom { get; set; } = null!;
         [StringLength(14)]
         public string Telephone { get; set; } = null!;
-        public bool ContactUrgence { get; set; }
+        [StringLength(5)]
+        [Unicode(false)]
+        public string ContactUrgence { get; set; } = null!;
         [StringLength(50)]
         [Unicode(false)]
         public string LienEnfant { get; set; } = null!;
         [Column("EnfantID")]
         public int EnfantId { get; set; }
 
-        [ForeignKey("Id")]
-        [InverseProperty("PersonnesAutoriser")]
-        public virtual Enfant IdNavigation { get; set; } = null!;
+        [ForeignKey("EnfantId")]
+        [InverseProperty("PersonnesAutorisers")]
+        public virtual Enfant? Enfant { get; set; } = null!;
     }
 }

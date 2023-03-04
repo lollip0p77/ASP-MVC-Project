@@ -39,18 +39,19 @@ namespace ASP_MVC_SitePandas.Models
         [Column(TypeName = "date")]
         public DateTime CreationDeCompte { get; set; }
         [StringLength(50)]
-        public string UserName { get; set; } = null!;
-        [StringLength(50)]
-        public string Password { get; set; } = null!;
-        public bool RepondantPrincipal { get; set; }
-        [StringLength(50)]
         public string Lien { get; set; } = null!;
+        [Column("UserID")]
+        [StringLength(450)]
+        public string UserId { get; set; } = null!;
 
+        [ForeignKey("UserId")]
+        [InverseProperty("Repondants")]
+        public virtual AspNetUser? User { get; set; } = null!;
         [InverseProperty("Repondant")]
-        public virtual ICollection<DocumentsParent> DocumentsParents { get; set; }
+        public virtual ICollection<DocumentsParent>? DocumentsParents { get; set; }
         [InverseProperty("Repondant")]
-        public virtual ICollection<Enfant> Enfants { get; set; }
+        public virtual ICollection<Enfant>? Enfants { get; set; }
         [InverseProperty("Repondant")]
-        public virtual ICollection<Message> Messages { get; set; }
+        public virtual ICollection<Message>? Messages { get; set; }
     }
 }

@@ -1,0 +1,29 @@
+﻿@model ASP_MVC_SitePandas.Models.Evenement
+@{
+    ViewData["Evenement"] = "Évènement";
+}
+<h1>Liste des évenements</h1>
+<p>
+    <a class="btn" style="background-color:limegreen">Ajouter</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom del'évenement</th>
+            <th>Type d'évenements</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Temps des fêtes</td>
+            <td>Fermeture</td>
+            <td>
+                <a><span style="color:limegreen" class="fa fa-pencil"></span></a>
+                <a><span style="color:limegreen" class="fa fa-trash"></span></a>
+                <a><span style="color:limegreen" class="fa fa-eye"></span></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

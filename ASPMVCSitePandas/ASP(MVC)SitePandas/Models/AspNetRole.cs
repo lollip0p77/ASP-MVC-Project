@@ -14,19 +14,24 @@ namespace ASP_MVC_SitePandas.Models
             Users = new HashSet<AspNetUser>();
         }
 
-        [Key]
+        //[Key]
         public string Id { get; set; } = null!;
-        [StringLength(256)]
+        //[StringLength(256)]
         public string? Name { get; set; }
-        [StringLength(256)]
+        //[StringLength(256)]
         public string? NormalizedName { get; set; }
         public string? ConcurrencyStamp { get; set; }
 
-        [InverseProperty("Role")]
+        //[InverseProperty("Role")]
         public virtual ICollection<AspNetRoleClaim> AspNetRoleClaims { get; set; }
 
-        [ForeignKey("RoleId")]
-        [InverseProperty("Roles")]
+        //[ForeignKey("RoleId")]
+        //[InverseProperty("Roles")]
         public virtual ICollection<AspNetUser> Users { get; set; }
+
+        /***/
+        //[ForeignKey("RoleId")]
+        public virtual ICollection<AspNetUserRole> UserRoles { get; set; }
+        /***/
     }
 }

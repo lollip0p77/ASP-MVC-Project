@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.Medicament>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#select").change(function () {
+                let formData = new FormData();
+                let enfantId = document.getElementById('select').value;
+                let url = '@Url.Action("GetDetailByEnfantID", "Medicaments")?enfantId=' + enfantId;
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+                    contentType: false,
+                    processData: false,
+                    cache: false,
+                    data: formData,
+                    success: function (response) {
+                        if (response.responseCode == 0) {
+                            let medicaments = JSON.parse(response.responseMessage);
+                            let row = 0;
+                            console.log(medicaments);
+                            //boucle sur la liste de personne autoriser
+                            medicaments.forEach(function (medicaments) {
+                                let table = "<tr>";
+                                table += "<td>" + medicaments.Nom + "</td>";
+                                //table += "<td>" + persoAuto.Prenom + "</td>";
+                                table += '<td id="link' + row + '">';
+                                table += "</td>";
+                                table += "</tr>";
+                                document.getElementById("list").innerHTML = table;
+
+                                //creation des lien vers les autres pages
+                                let linkEdit = document.createElement("a");
+                                linkEdit.href = '@Url.Action("Edit", "Medicaments")/' + medicaments.Id;
+                                linkEdit.innerHTML = '<span style="color:limegreen" class="fa fa-pencil"></span>';
+                                document.getElementById("link" + row).appendChild(linkEdit);
+
+                                let linkDelete = document.createElement("a");
+                                linkDelete.href = '@Url.Action("Delete", "Medicaments")/' + medicaments.Id;
+                                linkDelete.innerHTML = '<span style="color:limegreen" class="fa fa-trash"></span>';
+                                document.getElementById("link" + row).appendChild(linkDelete);
+
+                                let linkDetails = document.createElement("a");
+                                linkDetails.href = '@Url.Action("Details", "Medicaments")/' + medicaments.Id;
+                                linkDetails.innerHTML = '<span style="color:limegreen" class="fa fa-eye"></span>';
+                                document.getElementById("link" + row).appendChild(linkDetails);
+                            })
+                            document.getElementById("enfantnom").innerHTML = "";
+                        }
+                        else {
+                            alert("Not found");
+                        }
+                    },
+                });
+            })
+        })
+    </script>
+}
+
+<h1>Medicaments</h1>
+<p>
+    <a asp-action="Create" class="btn" style="background-color:limegreen">Ajouter</a>
+</p>
+
+<table class="table">
+    <thead>
+        <div>
+            <label style="margin-bottom:10px"><h3>Sélectionnez un enfant:</h3></label>
+            <select id="select" class="form-control" asp-items="ViewBag.EnfantId"></select>
+        </div>
+        <tr>
+            <th>Nom</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="list">
+
+    </tbody>
+</table>

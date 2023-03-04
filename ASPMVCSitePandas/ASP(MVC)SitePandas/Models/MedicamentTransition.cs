@@ -18,9 +18,9 @@ namespace ASP_MVC_SitePandas.Models
 
         [ForeignKey("EnfantId")]
         [InverseProperty("MedicamentTransitions")]
-        public virtual Enfant Enfant { get; set; } = null!;
+        public virtual Enfant? Enfant { get; set; } = null!;
         [ForeignKey("MedicamentsEnfantsId")]
         [InverseProperty("MedicamentTransitions")]
-        public virtual Medicament MedicamentsEnfants { get; set; } = null!;
+        public virtual Medicament? MedicamentsEnfants { get; set; } = null!;
     }
 }

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.DocumentsParent>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Liste des documents</h1>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn" style="background-color:limegreen">ajouter</a>
+    </p>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nom)</th>
+            <th>Repondant</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nom</td>
+                <td>@item.Repondant.Prenom</td>
+                <td>
+                    <a asp-action="Download" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-download"></span></a>
+                    @if(User.IsInRole("Admin")){
+                        <a asp-action="Delete" asp-route-id="@item.Id"><span style="color:limegreen" class="fa fa-trash"></span></a>
+                    }
+                </td>       
+            </tr>
+        }
+    </tbody>
+</table>

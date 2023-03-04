@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.PersonnesAutoriser>
+@{
+    ViewData["Title"] = "Index";
+}
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#select").change(function () {
+                let formData = new FormData();
+                let enfantId = document.getElementById('select').value;
+                let url = '@Url.Action("GetDetailByEnfantID", "PersonnesAutoriser")?enfantId=' + enfantId;
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+                    contentType: false,
+                    processData: false,
+                    cache: false,
+                    data: formData,
+                    success: function (response) {
+                        if (response.responseCode == 0) {
+                            let persoAutos = JSON.parse(response.responseMessage);
+                            let row = 0;
+                            console.log(persoAutos);
+                            //boucle sur la liste de personne autoriser
+                            persoAutos.forEach(function (persoAuto) {
+                                let table = "<tr>";
+                                table += "<td>" + persoAuto.Nom + "</td>";
+                                table += "<td>" + persoAuto.Prenom + "</td>";
+                                table += '<td id="link' + row + '">';
+                                table += "</td>";
+                                table += "</tr>";
+                                document.getElementById("list").innerHTML = table;
+
+                                //creation des lien vers les autres pages
+                                let linkEdit = document.createElement("a");
+                                linkEdit.href = '@Url.Action("Edit", "PersonnesAutoriser")/' + persoAuto.Id;
+                                linkEdit.innerHTML = '<span style="color:limegreen" class="fa fa-pencil"></span>';
+                                document.getElementById("link" + row).appendChild(linkEdit);
+
+                                let linkDelete = document.createElement("a");
+                                linkDelete.href = '@Url.Action("Delete", "PersonnesAutoriser")/' + persoAuto.Id;
+                                linkDelete.innerHTML = '<span style="color:limegreen" class="fa fa-trash"></span>';
+                                document.getElementById("link" + row).appendChild(linkDelete);
+
+                                let linkDetails = document.createElement("a");
+                                linkDetails.href = '@Url.Action("Details", "PersonnesAutoriser")/' + persoAuto.Id;
+                                linkDetails.innerHTML = '<span style="color:limegreen" class="fa fa-eye"></span>';
+                                document.getElementById("link" + row).appendChild(linkDetails);
+                            })
+                            document.getElementById("enfantnom").innerHTML = "";
+                        }
+                        else {
+                            alert("Not found");
+                        }
+                    },
+                });
+            })
+        })
+    </script>
+}
+
+<h1>Liste des personnes autorisés</h1>
+<p>
+    <a asp-action="Create" class="btn" style="background-color:limegreen">ajouter</a>
+
+</p>
+
+<table class="table">
+    <thead>
+        <div>
+            <label style="margin-bottom:10px"><h3>Sélectionnez un enfant:</h3></label>
+            <select id="select" class="form-control" asp-items="ViewBag.EnfantId"></select>
+        </div>
+        
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            @*<th>@Html.DisplayNameFor(model => model.Nom)</th>
+            <th>@Html.DisplayNameFor(model => model.Prenom)</th>*@
+            @*<th id="enfantnom">Enfant</th>*@
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="list">
+        
+            
+        
+    </tbody>
+</table>
+

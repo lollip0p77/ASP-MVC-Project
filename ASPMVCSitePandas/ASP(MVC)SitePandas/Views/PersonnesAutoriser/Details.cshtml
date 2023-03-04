@@ -1,0 +1,54 @@
+﻿@model ASP_MVC_SitePandas.Models.PersonnesAutoriser;
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+<h1>Informations</h1>
+
+<div>
+    <h4>Personnes autorisés</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nom:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            Prenom:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            Telephone:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Telephone)
+        </dd>
+        <dt class="col-sm-2">
+            Contact d'urgence:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.ContactUrgence)
+        </dd>
+        <dt class="col-sm-2">
+            Lien avec l'enfant:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.LienEnfant)
+        </dd>
+        <dt class="col-sm-2">
+            Enfant:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.Enfant.Prenom)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>|
+    <a asp-action="Index">Back to List</a>
+</div>

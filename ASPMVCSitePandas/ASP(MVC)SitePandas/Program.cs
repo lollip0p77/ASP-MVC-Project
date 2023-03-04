@@ -1,4 +1,5 @@
 using ASP_MVC_SitePandas.Data;
+using ASP_MVC_SitePandas.Hubs;
 using ASP_MVC_SitePandas.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,9 @@ connectionString = builder.Configuration.GetConnectionString("DefaultConnection"
 builder.Services.AddDbContext<LesPetitsPandasContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+// chat signalR
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -47,5 +51,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
-
+app.MapHub<ChatHub>("/chatHub");
 app.Run();

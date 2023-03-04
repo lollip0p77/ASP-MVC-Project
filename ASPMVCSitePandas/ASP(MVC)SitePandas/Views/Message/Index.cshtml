@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.NameList>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@if(User.IsInRole("Admin"))
+{
+    <h1>Liste des repondants</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom du répondant</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rep in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-action="Message" asp-route-id="@rep.UserId"><span style="color:limegreen">@Html.DisplayFor(modelRep => rep.Nom) @Html.DisplayFor(modelRep => rep.Prenom)</span></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1>Liste des éducatrices</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom de l'éducatrices</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var edu in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-action="Message" asp-route-id="@edu.UserId"><span style="color:limegreen">@Html.DisplayFor(modelRep => edu.Nom) @Html.DisplayFor(modelRep => edu.Prenom)</span></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

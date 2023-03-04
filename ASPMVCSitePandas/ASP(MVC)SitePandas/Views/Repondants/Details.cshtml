@@ -1,0 +1,93 @@
+﻿@model ASP_MVC_SitePandas.Models.Repondant
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<section id="Repondants" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Repondants</h2>
+
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Details">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="mb-3 row">
+                            <label for="staticNom" class="col-sm-2 col-form-label">Nom:</label>
+                            <div class="col-sm-10 text-color2">
+                                <input type="text" readonly class="form-control-plaintext" id="Nom" value="@Html.DisplayFor(model => model.Nom)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticPrenom" class="col-sm-2 col-form-label">Prénom:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticPrenom" value="@Html.DisplayFor(model => model.Prenom)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticSexe" class="col-sm-2 col-form-label">Sexe:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticSexe" value="@Html.DisplayFor(model => model.Sexe)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticAdresse" class="col-sm-2 col-form-label">Adresse:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticAdresse" value="@Html.DisplayFor(model => model.Adresse)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticVille" class="col-sm-2 col-form-label">Ville:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticVille" value="@Html.DisplayFor(model => model.Ville)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticCodePostal" class="col-sm-2 col-form-label">Code Postal:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticCodePostal" value="@Html.DisplayFor(model => model.CodePostal)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticCourriel" class="col-sm-2 col-form-label">Courriel:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticCourriel" value="@Html.DisplayFor(model => model.Courriel)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticTelephone" class="col-sm-2 col-form-label">Téléphone:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticTelephone" value="@Html.DisplayFor(model => model.Telephone)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticDateCreation" class="col-sm-2 col-form-label">Date de creation du compte:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticDateCreation" value="@Html.DisplayFor(model => model.CreationDeCompte)">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="staticRepPrincipale" class="col-sm-2 col-form-label">Lien avec l'enfant:</label>
+                            <div class="col-sm-10 ">
+                                <input type="text" readonly class="form-control-plaintext" id="staticRepPrincipale" value="@Html.DisplayFor(model => model.Lien)">
+                            </div>
+                        </div>
+
+                        <div style="padding-top: 20px" class="text-center">
+                            <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+                            <a asp-action="Index">Back to List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

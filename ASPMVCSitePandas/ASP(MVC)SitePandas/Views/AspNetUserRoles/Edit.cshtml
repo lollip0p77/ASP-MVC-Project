@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.AspNetUserRole>
+
+@{
+    ViewData["Title"] = "Gestion Utilisateurs";
+}
+
+<h1>Gestion des utilisateurs</h1>
+
+<hr />
+<div class="d-flex">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*ERROR MSGS*@
+            @{
+                var error = "";
+                if (ViewData["Completion"].ToString() == "Cet usager possède déjà ce rôle.")
+                {
+                    error = "text-danger";
+                }
+
+            }
+            <h2 class="@error">@ViewData["Completion"]</h2>
+            @*USERS*@
+            <label asp-for="@Model.First().UserId" class="control-label"></label>
+            <select asp-for="@Model.First().UserId" asp-items="ViewBag.UserId"></select>
+            <span asp-validation-for="@Model.First().UserId" class="text-danger"></span>
+
+            @*ROLES*@
+            <label asp-for="@Model.First().RoleId" class="control-label"></label>
+            <select asp-for="@Model.First().RoleId" asp-items="ViewBag.RoleId"></select>
+            <span asp-validation-for="@Model.First().RoleId" class="text-danger"></span>
+            <input type="submit" value="Save" class="btn" style="background-color:limegreen" />
+            @*<div class="form-group d-flex justify-content-around my-5">
+                
+            </div>*@
+        </form>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-around">
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-dark fw-bolder">USERS</th>
+                    <th class="text-dark fw-bolder">ROLES</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ur in Model)
+                {
+                    <tr class="tbl-vis">
+                        <td>
+                            @ur.User.UserName
+                        </td>
+                        <td>
+                            @ur.Role.Name
+                        </td>
+                        <td>
+                            <a class="btn btn-danger"
+                           asp-action="Delete"
+                           asp-route-uid="@ur.UserId"
+                           asp-route-rid="@ur.RoleId">DELETE</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Retour à l'acceuil</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

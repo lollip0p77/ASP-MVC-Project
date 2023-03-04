@@ -19,6 +19,6 @@ namespace ASP_MVC_SitePandas.Models
         public string Nom { get; set; } = null!;
 
         [InverseProperty("Allergie")]
-        public virtual ICollection<AllergiesEnfant> AllergiesEnfants { get; set; }
+        public virtual ICollection<AllergiesEnfant>? AllergiesEnfants { get; set; }
     }
 }

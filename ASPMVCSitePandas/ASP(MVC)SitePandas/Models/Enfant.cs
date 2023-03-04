@@ -11,7 +11,8 @@ namespace ASP_MVC_SitePandas.Models
         public Enfant()
         {
             AllergiesEnfants = new HashSet<AllergiesEnfant>();
-            MedicamentTransitions = new HashSet<MedicamentTransition>();
+            Medicaments = new HashSet<Medicament>();
+            PersonnesAutorisers = new HashSet<PersonnesAutoriser>();
             Presences = new HashSet<Presence>();
         }
 
@@ -40,14 +41,14 @@ namespace ASP_MVC_SitePandas.Models
 
         [ForeignKey("RepondantId")]
         [InverseProperty("Enfants")]
-        public virtual Repondant Repondant { get; set; } = null!;
-        [InverseProperty("IdNavigation")]
-        public virtual PersonnesAutoriser? PersonnesAutoriser { get; set; }
+        public virtual Repondant? Repondant { get; set; } = null!;
         [InverseProperty("Enfant")]
-        public virtual ICollection<AllergiesEnfant> AllergiesEnfants { get; set; }
+        public virtual ICollection<AllergiesEnfant>? AllergiesEnfants { get; set; }
         [InverseProperty("Enfant")]
-        public virtual ICollection<MedicamentTransition> MedicamentTransitions { get; set; }
+        public virtual ICollection<Medicament>? Medicaments { get; set; }
         [InverseProperty("Enfant")]
-        public virtual ICollection<Presence> Presences { get; set; }
+        public virtual ICollection<PersonnesAutoriser>? PersonnesAutorisers { get; set; }
+        [InverseProperty("Enfant")]
+        public virtual ICollection<Presence>? Presences { get; set; }
     }
 }

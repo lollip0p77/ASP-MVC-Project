@@ -1,0 +1,48 @@
+﻿@model ASP_MVC_SitePandas.Models.Medicament
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<section id="Medicament" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Medicaments</h2>
+            <p class="" style="text-align: center">Veuillez remplir les champs ci dessous pour ajouter le medicament.</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <input asp-for="Nom" type="text" class="form-control" id="nom" placeholder="Nom" required>
+                            <span asp-validation-for="Nom" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea asp-for="Description" class="form-control" rows="5" placeholder="Message" required></textarea>
+                            @*<span asp-validation-for="Description" class="text-danger"></span>*@
+                        </div>
+                        <div class="form-group" style="padding-top: 10px;">
+                            <select asp-for="EnfantId" class="form-control" asp-items="ViewBag.EnfantId"></select>
+                        </div>
+
+
+                        <div style="padding-top: 20px" class="text-center"><button class="btn" style="background-color:limegreen" type="submit" value="Create">Ajouter</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

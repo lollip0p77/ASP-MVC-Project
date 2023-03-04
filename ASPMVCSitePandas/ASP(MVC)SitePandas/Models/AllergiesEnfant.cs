@@ -21,9 +21,9 @@ namespace ASP_MVC_SitePandas.Models
 
         [ForeignKey("AllergieId")]
         [InverseProperty("AllergiesEnfants")]
-        public virtual Allergy Allergie { get; set; } = null!;
+        public virtual Allergy? Allergie { get; set; } = null!;
         [ForeignKey("EnfantId")]
         [InverseProperty("AllergiesEnfants")]
-        public virtual Enfant Enfant { get; set; } = null!;
+        public virtual Enfant? Enfant { get; set; } = null!;
     }
 }

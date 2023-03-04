@@ -6,13 +6,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ASP_MVC_SitePandas.Models
 {
+    [Serializable]
+    public class JsonResponseViewModelMedicament
+    {        //bool for working or not       
+        public int ResponseCode { get; set; }
+        //data return        
+        public string ResponseMessage { get; set; } = string.Empty;
+    }
     public partial class Medicament
     {
-        public Medicament()
-        {
-            MedicamentTransitions = new HashSet<MedicamentTransition>();
-        }
-
         [Key]
         public int Id { get; set; }
         [StringLength(450)]
@@ -20,8 +22,11 @@ namespace ASP_MVC_SitePandas.Models
         [StringLength(2000)]
         [Unicode(false)]
         public string Description { get; set; } = null!;
+        [Column("EnfantID")]
+        public int EnfantId { get; set; }
 
-        [InverseProperty("MedicamentsEnfants")]
-        public virtual ICollection<MedicamentTransition> MedicamentTransitions { get; set; }
+        [ForeignKey("EnfantId")]
+        [InverseProperty("Medicaments")]
+        public virtual Enfant? Enfant { get; set; } = null!;
     }
 }

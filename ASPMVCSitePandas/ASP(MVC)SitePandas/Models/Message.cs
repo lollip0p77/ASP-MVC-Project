@@ -19,8 +19,10 @@ namespace ASP_MVC_SitePandas.Models
         public string Message1 { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime Date { get; set; }
-        public bool Statut { get; set; }
         public bool Actif { get; set; }
+        [StringLength(1)]
+        [Unicode(false)]
+        public string Envoyeur { get; set; } = null!;
 
         [ForeignKey("EducatriceId")]
         [InverseProperty("Messages")]

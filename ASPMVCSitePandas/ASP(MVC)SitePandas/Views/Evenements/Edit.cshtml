@@ -1,0 +1,60 @@
+﻿@model ASP_MVC_SitePandas.Models.Evenement
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section id="Evenements" class="padd-section">
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+            <h2>Évènements</h2>
+            <p class="" style="text-align: center">Veuillez remplir les champs ci dessous pour modifier un évènement.</p>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="form">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <input asp-for="Titre" type="text" class="form-control" id="titre" placeholder="Nom de l'évènement" required>
+                            <span asp-validation-for="Titre" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea asp-for="Description" class="form-control" rows="5" placeholder="Description de l'évènement" required></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="Cout" type="text" class="form-control" id="Cout" placeholder="Cout" required>
+                            <span asp-validation-for="Cout" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="HeureDebut">Début</label>
+                            <input asp-for="HeureDebut" type="date" class="form-control" id="dos" placeholder="Début" required>
+                            <span asp-validation-for="HeureDebut" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="HeureFin">Fin</label>
+                            <input asp-for="HeureFin" type="date" class="form-control" id="doe" placeholder="Fin" required>
+                            <span asp-validation-for="HeureFin" class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="padding-top: 10px;">
+                            <select asp-for="TypeId" class="form-control" asp-items="ViewBag.TypeID"></select>
+                        </div>
+                        <div style="padding-top: 20px" class="text-center"><button class="btn" style="background-color:limegreen" type="submit" value="Save">Modifier</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

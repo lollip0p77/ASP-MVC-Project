@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ASP_MVC_SitePandas.Models.Message>
+<body>
+    <div style="display: none" id="educatriceId">@ViewData["IDeducatrice"]</div>
+    <div style="display: none" id="repondantId">@ViewData["IDrepondant"]</div>
+    <div style="display: none" id="userRole">@ViewData["Role"]</div>
+    <div class="section-title text-center">
+        <h2>Conversation</h2>
+    </div>
+    <table>
+        <tbody>
+            <tr>
+                <th>
+                    <ul id="messagesList"></ul>
+                </th> 
+            </tr>
+        </tbody>
+    </table>
+    <div>Message</div>
+    <div><input type="text" id="messageInput" /></div>
+    <input type="button" id="sendButton" value="Send Message" />
+</body>
+@if (Model.FirstOrDefault() != null)
+{
+    <script>
+        let sqlQueryList = @Html.Raw(Json.Serialize(Model));
+        sqlQueryList.forEach(function(message){
+            let li = document.createElement("li");
+            let dateFormat = message.date.replace("T", " ").replace(/\..+/, "");
+            document.getElementById("messagesList").appendChild(li);
+            if(message.envoyeur == "E"){
+                li.innerHTML = `@ViewData["Educatrice"] : ${message.message1}<br>${dateFormat}`;
+            }
+            else{
+                li.innerHTML = `@ViewData["Repondant"] : ${message.message1}<br>${dateFormat}`;
+            }
+        });       
+        document.body.scrollTop = document.body.scrollHeight;
+        document.documentElement.scrollTop = document.documentElement.scrollHeight;
+    </script>
+}
+<script>
+    function receiveName() {
+        let nameString = '@ViewData["Educatrice"]|@ViewData["Repondant"]'
+        return nameString;
+    }
+</script>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
